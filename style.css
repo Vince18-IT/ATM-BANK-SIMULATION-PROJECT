@@ -1,0 +1,318 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+
+
+}
+
+#container {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15), 0 12px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
+    width: 650px;
+    height: 300px;
+    border-radius: 20px
+}
+
+#atmcolor {
+    width: 650px;
+    height: 100px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 61, 255, 1) 0%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#atmtext {
+    display: inline-block;
+    position: relative;
+    bottom: 115px;
+    left: 210px;
+    color: #fff;
+    font-size: 3em;
+
+}
+
+p {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 1.5em;
+    margin-top: -20px;
+}
+
+#forbutton {
+
+    padding: 10px;
+    position: relative;
+    display: flex;
+    width: 600px;
+    left: 20px;
+    justify-content: space-evenly;
+    bottom: 50px;
+}
+
+.button {
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 61, 255, 1) 0%);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: rgba(0, 61, 255, 0.8);
+    scale: 1.1;
+
+}
+
+#balance {
+    background: #f3f3f3;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    display: inline-block;
+    position: relative;
+    left: 55px;
+    bottom: 110px;
+}
+
+#exit {
+    padding: 0px 20px;
+}
+
+
+#withdrawPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#depositPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#checkBalancePopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#exitPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.popup-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s;
+}
+
+.popup-content input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.popup-buttons button {
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+.popup-buttons button:first-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.popup-buttons button:first-child:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.popup-buttons button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+.popup-buttons button:last-child:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+
+#currentBalanceDisplay {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#checkBalancePopup .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+#checkBalancePopup button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+#checkBalancePopup button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#exitPopup .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+#exitPopup h3 {
+    margin-bottom: 10px;
+}
+
+#exitPopup p {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+#exitPopup .popup-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#exitPopup .popup-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#confirmExit {
+    background-color: #28a745;
+    color: white;
+}
+
+#confirmExit:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#exitPopup .popup-buttons button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+#exitPopup .popup-buttons button:last-child:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

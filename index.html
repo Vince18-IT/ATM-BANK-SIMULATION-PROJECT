@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="atmcolor"></div>
+        <div id="fortext">
+            <h2 id="atmtext">ATM Bank</h2>
+        </div>
+
+        <p id="balance">Current Balance: ₱5000.00 </p>
+
+        <div id="forbutton">
+            <button class="button" onclick="openWithdrawPopup()">Withdraw</button>
+            <button class="button" onclick="openDepositPopup()">Deposit</button>
+            <button class="button" onclick="openCheckBalancePopup()">Check Balance</button>
+            <button class="button" id="exit" onclick="openExitPopup()">Exit</button>
+        </div>
+
+    </div>
+
+    <div id="withdrawPopup" class="popup">
+        <div class="popup-content">
+            <h3>Enter Withdrawal Amount</h3>
+            <input type="number" id="withdrawAmount" min="1" placeholder="Enter amount">
+            <div class="popup-buttons">
+                <button onclick="proceedWithdraw()">Proceed</button>
+                <button onclick="closeWithdrawPopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="depositPopup" class="popup">
+        <div class="popup-content">
+            <h3>Enter Deposit Amount</h3>
+            <input type="number" id="depositAmount" min="1" placeholder="Enter amount">
+            <div class="popup-buttons">
+                <button onclick="proceedDeposit()">Proceed</button>
+                <button onclick="closeDepositPopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkBalancePopup" class="popup">
+        <div class="popup-content">
+            <h3>Your Current Balance</h3>
+            <p id="currentBalanceDisplay">₱0.00</p>
+            <button onclick="closeCheckBalancePopup()">Close</button>
+        </div>
+    </div>
+
+    <div id="exitPopup" class="popup">
+        <div class="popup-content">
+            <h3>Thank You!</h3>
+            <p>Are you sure you want to exit?</p>
+            <div class="popup-buttons">
+                <button id="confirmExit" onclick="confirmExit()">Yes</button>
+                <button onclick="closeExitPopup()">No</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
